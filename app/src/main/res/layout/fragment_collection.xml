@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:lv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="smv.lovearthstudio.com.svmproj.fragment.CollectionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="采集样本数据"
+        android:textSize="50sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sp_action"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:entries="@array/Action" />
+
+        <Spinner
+            android:id="@+id/sp_position"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:entries="@array/Position" />
+
+        <Spinner
+            android:id="@+id/sp_hz"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:entries="@array/HZ"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_start_collection"
+            style="@style/SvmBtnStyle"
+            android:text="采集开始!" />
+
+        <Button
+            android:id="@+id/btn_stop_collection"
+            style="@style/SvmBtnStyle"
+            android:text="采集停止!" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_file_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入你的名字" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  <me.wangyuwei.loadingview.LoadingView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:id="@+id/loading_view"
+      lv:lv_duration="4"
+      lv:lv_start_color="#66ccff"
+      lv:lv_end_color="#99ffcc"
+      lv:lv_internal_radius="5dp"
+      lv:lv_external_radius="92dp"
+      android:visibility="invisible"/>
+</LinearLayout>
